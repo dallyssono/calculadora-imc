@@ -53,7 +53,7 @@ body {
         cursor: pointer;
     }
 
-    #resultado {
+    #console {
         margin-top: 20px;
         width: 300px;
         min-height: 100px;
@@ -62,5 +62,10 @@ body {
         color: #2c3743;
         font-weight: bold;
         text-align: center;
+        justify-content: center;
+
+        #resultado {
+            margin-top: 12%;
+        }
     }
 }

@@ -47,7 +47,7 @@ body {
   background: #54f774;
   cursor: pointer;
 }
-.container #resultado {
+.container #console {
   margin-top: 20px;
   width: 300px;
   min-height: 100px;
@@ -56,4 +56,8 @@ body {
   color: #2c3743;
   font-weight: bold;
   text-align: center;
+  justify-content: center;
+}
+.container #console #resultado {
+  margin-top: 12%;
 }/*# sourceMappingURL=style.css.map */

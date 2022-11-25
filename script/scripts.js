@@ -1,23 +1,27 @@
 const calcular = document.querySelector('#calcular')
 
 function imc () {
-    const nome = document.querySelector('#nome').value
+    let nome = document.querySelector('#nome').value
     const peso = document.querySelector('#peso').value
     const altura = document.querySelector('#altura').value
+    const resultado = document.querySelector('#resultado')
 
-    console.log(peso)
+    if (nome == "") nome = 'Amigo'
 
     imc = peso/(altura * altura) 
-    switch (imc) {
-        case imc <=18.5:
-            console.log('Desnutrido')
-            break
-        case imc >=18.6 && imc <=24.9:
-            console.log('Peso ideal')
-            break
-        case imc > 24.9:
-            console.log('Gorducho')
-            break
+
+    if (imc < 18.5) {
+        resultado.innerHTML = `${nome}, seu peso está abaixo do normal.`
+    } else if (imc >= 18.5 && imc <=24.9) {
+        resultado.innerHTML = `${nome}, seu peso está normal.`
+    } else if (imc >= 25 && imc <= 29.9) {
+        resultado.innerHTML = `${nome}, você está acima do peso.`
+    } else if (imc >= 30 && imc <= 34.9) {
+        resultado.innerHTML = `${nome}, você está obeso. \n Obesidade classe I`
+    } else if (imc >= 35 && imc <= 39.9) {
+        resultado.innerHTML = `${nome}, você está obeso.\n Obesidade classe II`
+    } else {
+        resultado.innerHTML = `${nome}, você está obeso. \n Obesidade classe III`
     }
 }
 
