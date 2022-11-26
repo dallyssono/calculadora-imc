@@ -7,6 +7,9 @@ function imc () {
     const resultado = document.querySelector('#resultado')
 
     if (nome == "") nome = 'Amigo'
+    if (peso == "" || altura == "") {
+        alert('Você precisa preencher pelo menos o peso e a altura.')
+    } else {
 
     imc = peso/(altura * altura) 
 
@@ -23,6 +26,7 @@ function imc () {
     } else {
         resultado.innerHTML = `${nome}, você está obeso. \n Obesidade classe III`
     }
+}
 }
 
 
